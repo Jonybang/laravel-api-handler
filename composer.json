@@ -1,8 +1,8 @@
 {
-    "name": "marcelgwerder/laravel-api-handler",
+    "name": "jonybang/laravel-api-handler",
     "description": "Package providing helper functions for a Laravel REST-API ",
     "keywords": ["api", "laravel", "rest", "url", "parse", "mysql"],
-    "homepage": "http://github.com/marcelgwerder/laravel-api-handler",
+    "homepage": "http://github.com/jonybang/laravel-api-handler",
     "license": "MIT",
     "authors": [
         {
