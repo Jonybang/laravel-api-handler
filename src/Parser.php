@@ -521,6 +521,8 @@ class Parser
 
             $column = $keyMatches[3];
 
+			dd($keyMatches);
+
 			$is_or = isset($keyMatches[2]) && $keyMatches[2];
 
             if ($comparator == 'IN') {
