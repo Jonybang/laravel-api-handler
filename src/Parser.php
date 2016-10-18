@@ -521,9 +521,7 @@ class Parser
 
             $column = $keyMatches[3];
 
-			dd($keyMatches);
-
-			$is_or = isset($keyMatches[2]) && $keyMatches[2];
+			$is_or = isset($keyMatches[1]) && $keyMatches[1];
 
             if ($comparator == 'IN') {
                 $values = explode(',', $filterParamValue);
