@@ -636,7 +636,7 @@ class Parser
             $this->query->where(function ($query) use ($fullTextSearchColumns, $keywords) {
                 foreach ($fullTextSearchColumns as $column) {
                     foreach ($keywords as $keyword) {
-                        $query->orWhere($column, 'LIKE', '%' . $keyword . '%');
+                        $query->where($column, 'LIKE', '%' . $keyword . '%');
                     }
                 }
             });
