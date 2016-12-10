@@ -635,9 +635,9 @@ class Parser
             //Use default php implementation
             $this->query->where(function ($query) use ($fullTextSearchColumns, $keywords) {
                 foreach ($fullTextSearchColumns as $column) {
-					$query->where(function($q) use ($keywords, $column){
+					$query->orWhere(function($q) use ($keywords, $column){
 						foreach ($keywords as $keyword) {
-							$q->orWhere($column, 'LIKE', '%' . $keyword . '%');
+							$q->where($column, 'LIKE', '%' . $keyword . '%');
 						}
 					});
                 }
