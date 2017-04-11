@@ -10,6 +10,7 @@ use \Illuminate\Database\Eloquent\Relations\HasOne;
 use \Illuminate\Database\Eloquent\Relations\MorphMany;
 use \Illuminate\Database\Eloquent\Relations\MorphOne;
 use \Illuminate\Database\Query\Builder as QueryBuilder;
+use Illuminate\Database\Query\JoinClause;
 use \Illuminate\Support\Facades\Config;
 use \InvalidArgumentException;
 use \ReflectionObject;
@@ -138,6 +139,9 @@ class Parser
 
         $this->isEloquentBuilder = $builder instanceof EloquentBuilder;
         $this->isQueryBuilder = $builder instanceof QueryBuilder;
+
+		if($this->isQueryBuilder)
+			$this->isQueryBuilder = $builder instanceof JoinClause;
 
         if ($this->isEloquentBuilder) {
             $this->query = $builder->getQuery();
