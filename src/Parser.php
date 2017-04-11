@@ -140,7 +140,7 @@ class Parser
         $this->isEloquentBuilder = $builder instanceof EloquentBuilder;
         $this->isQueryBuilder = $builder instanceof QueryBuilder;
 
-		if($this->isQueryBuilder)
+		if(!$this->isQueryBuilder)
 			$this->isQueryBuilder = $builder instanceof JoinClause;
 
         if ($this->isEloquentBuilder) {
